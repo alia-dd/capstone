@@ -1,0 +1,131 @@
+ .holdin{
+       max-width: 90%;
+      display: flex;
+      /*background: #f2edee;*/
+      padding: 5%;
+      margin-left: 5%;
+      margin-top:10%;
+      /*border-top:solid 2px #c4b82d;*/
+      /*border-bottom:solid 3px #c4b82d; */
+      box-sizing: border-box;
+/*       flex-direction: column; */
+		/*justify-content: center;*/
+      flex-wrap:wrap;
+      color: #ffffff;
+
+    }
+
+    #inter1{
+     flex: 1;
+      background: rgba(25, 12, 48,1);
+      border:solid 3px white;
+       width:45%;
+      align-items: center;
+      padding: 2%;
+      font-size: 100%;
+      font-family: 'Roboto', sans-serif;
+      margin: 30px;
+      overflow: auto;
+    }
+
+    #inter2{
+      flex: 1;
+      background: rgba(25, 12, 48,1);
+      border:solid 3px white;
+       width:45%;
+      align-items: center;
+      padding: 2%;
+      font-size: 100%;
+      font-family: 'Roboto', sans-serif;
+      margin: 30px;
+      overflow: auto;
+    }
+
+    #inter3{
+      flex: 1;
+      background: rgba(25, 12, 48,1);
+      border:solid 3px white;
+       width:50%;
+      align-items: center;
+      padding: 2%;
+      font-size: 100%;
+      font-family: 'Roboto', sans-serif;
+      margin: 30px;
+      overflow: auto;
+    }
+     #inter4{
+      flex: 1;
+      background: rgba(25, 12, 48,1);
+      border:solid 3px white;
+       width:50%;
+      align-items: center;
+      padding: 2%;
+      font-size: 100%;
+      font-family: 'Roboto', sans-serif;
+      margin: 30px;
+      overflow: auto;
+    }
+img{
+  width:100%;
+  height: 75%;
+  border-radius: 2%;
+  margin-bottom: 10px;
+}
+
+ 
+
+ @media screen and (max-width: 760px){
+ 
+    .a{
+      text-decoration: none;
+      color:#ffffff;
+    }
+    .b{
+      text-decoration: none;
+      color:#fc42da;
+    }
+    #inter1,#inter2,#inter3,#inter4{
+    	margin-left: 0;
+    	margin-right: 0;
+      color: #ffffff;
+    	width:90%;
+	}	
+	
+} 
+@media screen and (min-width: 760px){
+
+
+    .g1{
+  		display: flex;
+  		flex-direction: row;
+  
+	}	
+	.g2{
+  		display: flex;
+  		flex-direction: row;
+  
+}
+
+.inter{
+  background: red;
+	transition-duration: .9s;
+	transition-timing-function: ease;
+}
+.inter:hover{
+	border-color:rgba(216, 29, 216,1);
+	box-shadow:  0 0 10px 8px rgba(216, 29, 216,0.5);
+
+}
+#inter1:hover ,#inter2:hover ,#inter3:hover ,#inter4:hover{
+	border-color:rgba(216, 29, 216,1);
+	/*transition: transform 9s ease-out;*/
+
+}
+.a{
+	text-decoration: none;
+	color:#ffffff;
+}
+.b{
+  text-decoration: none;
+  color:#fc42da;
+}

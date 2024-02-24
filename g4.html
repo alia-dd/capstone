@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FUN_css</title>
+
+	<style>
+		*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  min-height:100vh;
+  overflow:hidden;
+/*   background-color:#001f25;  */
+  background-color:#000000; 
+}
+.sl{
+  position:relative;
+  width:500px;
+  height:250px;
+  display:flex;
+  flex-direction:row;
+/*   background:blue; */
+  overflow:hidden;
+}
+.sl span{
+  flex:1;
+  display:block;
+  top:0;
+  left:0;
+  width:10%;
+  height:100%;
+  margin:2px;
+  border: 3px solid #fc42da;
+  background:#fc42da;
+  filter:drop-shadow(0 0 100px #fc42da);
+}
+.sl span{
+  animation:animat 1.7s linear infinite;
+}
+.sl .slow{
+  animation:animat 1.5s linear infinite;
+}
+.sl .fast{
+  animation:animat 1.3s linear infinite;
+}
+
+@keyframes animat{
+  0%{
+    transform: translateY(calc(100%*var(--i)));
+  }
+   50%{
+    transform: translateY(calc(0%*var(--i)/2));
+  }
+  50%{
+    transform: translateY(calc(0%*var(--i)/2));
+  }
+  100%{
+    transform: translateY(calc(90%*var(--i)));
+  }
+}
+		
+	</style>
+</head>
+<body>
+	<div class="sl">
+      <span style="--i:9;"></span>
+      <span class="slow" style="--i:4;" ></span>
+      <span style="--i:5;"></span>
+      <span style="--i:8;"></span>
+      <span class="fast" style="--i:4;"></span>
+      <span style="--i:10;"></span>
+      <span class="slow" style="--i:7;"></span>
+      <span class="fast" style="--i:6;"></span>
+      <span style="--i:3;"></span>
+     <div>
+	
+</body>
+</html>

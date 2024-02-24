@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>capstone</title>
+  <link rel="icon" type="image/jpg" href="https://images.unsplash.com/photo-1645680827507-9f392edae51c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" type="text/css" href="fun_css.css">
+</head>
+<body>
+
+	<header>
+<div class="container">
+
+  <h1 class="logo">Fun<span>Css</span></h1>
+  
+  <div  class="mobile-nav" aria-controls= "ul-nav" aria-expanded = "false"><i class="fa  fa-align-justify  fa-2x"></i></div>
+  
+  <nav class="nav">
+      <ul id="ul-nav" data-visible = "false">
+        <li><a href="index.html">Home</a></li> 
+        <li><a href="#">Fun Css</a></li>
+        <!-- <li><a href=""><i class="fa fa-info site-nav--icon"></i>About</a></li> -->
+      </ul> 
+  </nav>
+</div>
+
+</header>
+
+
+<section>
+    <div class="holdin">
+      <div class="g1">
+
+            <a class="a" href="g1.html" target="_blank">
+            <div id="inter1" class="inter"><img class="dasimages" src="img/round-gg.png" alt="fun_css">this CSS is made by 
+              Online Tutorials got to Online Tutorials YouTobe channel he is a good YouTuber go and subscribe for more
+              fun CSS  <span><a class="b" href="fun1_html.html">see code here</a></span>. 
+            </div>
+            </a>
+
+            <a class="a" href="g2.html" target="_blank">
+            <div id="inter2" class="inter"><img class="dasimages" src="img/tr-gg.png" alt="gues my mood fun_css">the CSS 
+            is called gues the mood click on the box to go to the page 
+            <span><a class="b" href="fun2_html.html">see code here</a></span>.
+            </div>
+            </a>
+
+      </div>
+
+      <div class="g2">
+
+            <a class="a" href="g3.html" target="_blank">
+            <div id="inter3" class="inter"><img class="dasimages" src="img/vn-gg.png" alt="black goo fun-css">this CSS 
+              is called venom it was supposed to look like the venom goo  <span><a class="b" href="fun3_html.html">see code here</a></span>.
+            </div>
+            </a>
+            
+            <a class="a" href="g4.html" target="_blank">
+            <div id="inter4" class="inter"><img class="dasimages" src="img/bar-g.png" alt="page lodder fun_css">the CSS 
+              is a page loader, use it if you like <span><a class="b" href="fun4_html.html">see code here</a></span>.
+            </div>
+            </a>
+
+     
+
+
+      </div>
+    </div>
+</section>
+
+
+
+<footer>
+  <p>&copy; 2021 copy right by <span style="color: #fc42da">alia</span></p>
+</footer>
+<script>
+  var primerynav = document.querySelector("#ul-nav");
+  var mobilenav = document.querySelector(".mobile-nav");
+  mobilenav.addEventListener("click", () => {
+      var visibility = primerynav.getAttribute("data-visible");
+      if ( visibility === "false"){
+        primerynav.setAttribute("data-visible",true);
+        document.querySelector(".nav").style.transform="translateX(0%)";
+      }
+      if ( visibility === "true"){
+        primerynav.setAttribute("data-visible",false);
+        document.querySelector(".nav").style.transform="translateX(100%)";
+      }
+      console.log(visibility);
+    console.log("clicked");
+  });
+
+</script>
+</body>
+</html>

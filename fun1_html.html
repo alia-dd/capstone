@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+		<title>capstone</title>
+  <link rel="icon" type="image/jpg" href="https://images.unsplash.com/photo-1645680827507-9f392edae51c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+		<meta charset="UTF-8">
+	  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<!-- <link rel="stylesheet" type="text/css" href="threepage.css"> -->
+		<link rel="stylesheet" type="text/css" href="threepage.css">
+
+</head>
+<body>
+
+	<header>
+		<div class="container">
+
+		  <h1 class="logo">Fun<span>Css</span></h1>
+		  
+		  <div  class="mobile-nav" aria-controls= "ul-nav" aria-expanded = "false"><i class="fa  fa-align-justify  fa-2x"></i></div>
+		  
+		  <nav class="nav">
+		      <ul id="ul-nav" data-visible = "false">
+		        <li><a href="index.html">Home</a></li> 
+		        <li><a href="fun_css.html">Fun Css</a></li>
+		        <!-- <li><a href=""><i class="fa fa-info site-nav--icon"></i>About</a></li> -->
+		      </ul> 
+		  </nav>
+		</div>
+
+	</header>
+
+
+	<section class="section">
+
+		<ul >
+				<li onclick="return show('Page1','Page2');">html</li>
+			    <li onclick="return show('Page2','Page1');">css</li>
+			</ul>
+		<div class="d1">
+
+		  	<div id="Page1">
+		    	<div class="html">
+<pre>
+		
+
+	  &lt;body&gt;	
+
+	   &lt;div class="sl"&gt;
+	    &lt;span style="--i:1;"&gt;&lt;/span&gt;
+	    &lt;span style="--i:2;"&gt;&lt;/span&gt;
+	    &lt;span style="--i:3;"&gt;&lt;/span&gt;
+	    &lt;span style="--i:4;"&gt;&lt;/span&gt;
+	    &lt;span style="--i:5;"&gt;&lt;/span&gt;
+	    &lt;span style="--i:6;"&gt;&lt;/span&gt;
+	    &lt;span style="--i:7;"&gt;&lt;/span&gt;
+	    &lt;span style="--i:8;"&gt;&lt;/span&gt;
+	    &lt;span style="--i:9;"&gt;&lt;/span&gt;
+	    &lt;span style="--i:10;"&gt;&lt;/span&gt;
+      	   &lt;/div&gt;
+
+	  &lt;/body&gt;
+</pre>
+				</div>
+		  	</div>
+		    
+		  	<div id="Page2" style="display:none">
+		    	<div class="css">
+<pre>
+
+
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+}
+body{
+ display: flex;
+ justify-content: center;
+ align-items:center;
+ min-height:100vh;
+ overflow:hidden;
+ background-color:#001f25; 
+}
+.sl{
+ position:relative;
+ width:300px;
+ height:300px;
+}
+.sl span{
+ position:absolute;
+ top:0;
+ left:0;
+ width:100%;
+ height:100%;
+ transform:rotate(calc(36deg*var(--i)));
+}
+.sl span::before {
+ content: '';
+ position:absolute;
+ top:0;
+ left:0;
+ width:25px;
+ height:25px;
+ border-radius:50%;
+ background:transparent;
+ border:4px solid #00efff;
+ box-sizing:border-box;
+ box-shadow:0 0 20px #00efff,
+  -30px -30px 0 #00efff,
+  -30px -30px 20px #00efff,
+   30px 30px 0 #00efff,
+   30px 30px 20px #00efff,
+   30px -30px 0 #00efff,
+   30px -30px 20px #00efff,
+  -30px 30px 0 #00efff,
+  -30px 30px 20px #00efff;
+ animation:animate 5s linear infinite;
+ animation-delay:calc(-0.5s * var(--i));
+ transform-origin:20px;
+ transition-duration: 2000ms;
+}
+.sl:hover span::before {
+ box-shadow:0 0 20px #00efff,
+  -200px -200px 0 #00efff,
+  -200px -200px 20px #00efff,
+  200px 200px 0 #00efff,
+  200px 200px 20px #00efff,
+  200px -200px 0 #00efff,
+  200px -200px 20px #00efff,
+  -200px 200px 0 #00efff,
+  -200px 200px 20px #00efff;
+ transform-origin:250px;
+}
+@keyframes animate{
+ 0%{
+  transform:rotate(0deg);
+  filter:hue-rotate(0deg);
+ }
+ 100%{
+  transform:rotate(360deg);
+  filter:hue-rotate(360deg);
+ }
+}	
+		    		
+				</pre>
+		    	</div>
+		  	</div>
+
+	  	</div>
+
+	</section>
+
+
+
+
+	<footer>
+  		<p>&copy; 2021 copy right by <span style="color: #fc42da">alia</span></p>
+	</footer>
+	<script>
+	  var primerynav = document.querySelector("#ul-nav");
+	  var mobilenav = document.querySelector(".mobile-nav");
+	  mobilenav.addEventListener("click", () => {
+	      var visibility = primerynav.getAttribute("data-visible");
+	      if ( visibility === "false"){
+	        primerynav.setAttribute("data-visible",true);
+	        document.querySelector(".nav").style.transform="translateX(0%)";
+	      }
+	      if ( visibility === "true"){
+	        primerynav.setAttribute("data-visible",false);
+	        document.querySelector(".nav").style.transform="translateX(100%)";
+	      }
+	      console.log(visibility);
+	    console.log("clicked");
+	  });
+
+
+
+	  function show(shown, hidden) {
+	  document.getElementById(shown).style.display='block';
+	  document.getElementById(hidden).style.display='none';
+	  return false;
+}
+	</script>
+</body>
+</html>

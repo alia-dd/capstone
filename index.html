@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>capstone</title>
+  <link rel="icon" type="image/jpg" href="https://images.unsplash.com/photo-1645680827507-9f392edae51c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80">
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<!-- <script src="nav.js"></script> -->
+</head>
+<body>
+	<header>
+<div class="container">
+
+  <h1 class="logo">Fun<span>Css</span></h1>
+  
+  <div  class="mobile-nav" ><i class="fa  fa-align-justify  fa-2x"></i></div>
+ 
+  <nav class="nav">
+      <ul id="ul-nav" data-visible = "false">
+        <li><a href="#">Home</a></li> 
+        <li><a href="fun_css.html">Fun Css</a></li>
+        <!-- <li><a href=""><i class="fa fa-info site-nav--icon"></i>About</a></li> -->
+      </ul> 
+  </nav>
+</div>
+
+</header>
+
+
+<section class="it">
+	<div class="itt">
+		<div class="in" style="color: #fc42da">Introduction</div>
+	  <p class="intro"><!-- Hello and a big thank you for stopping by. As a web developer, I enjoy doing quick, entertaining CSS projects for this capstone. Without using any JS, I created a simple, entertaining HTML and CSS design. Some of the ideas were inspired by top YouTubers, while others were my own. If you could check out my project, it would be great.
+Visit the fun css website to see my CSS if you're interested. Click "see code" to view the code. If you'd like, you may copy the code and use it.
+I'm grateful. -->
+	  	<span style="font-size: 200%; color: #fc42da;">Hello,</span> and a big thank you for stopping by. As a web developer, I enjoy doing quick, entertaining CSS projects, for this capstoneWithout using any JS, I created a simple, entertaining HTML and CSS design, Some of the ideas were inspired by top YouTubers, while others were my own, If you could check out my project, it would be great.<br>Visit the fun css page to see my CSS if you're interested. Click "see code" to view the code. If you'd like, you may copy the code and use it.<br> 
+      I'm grateful <span style="color:#fc42da ">.........</span>
+      <!-- Hello,</span> thank you for taking the time to visit. I'm a web developer who loves little  fun CSS project for this capstone I made an easy fun Html and CSS design  no JS included, some 
+      were inspired by good YouTubers others I try to come up with I would appreciate itt if you could visit 
+      my project.<br>if you like to see my CSS go to the fun_css page, to see the code click on the see code 
+      you can copy the code and use it if you like.<br> 
+      thank you <span style="color:#fc42da ">.........</span> -->
+	  </p>
+  </div>
+</section>
+<footer>
+	<p>&copy; 2021 copy right by <span style="color: #fc42da">alia</span></p>
+</footer>
+<script>
+	var primerynav = document.querySelector("#ul-nav");
+	var mobilenav = document.querySelector(".mobile-nav");
+	mobilenav.addEventListener("click", () => {
+  		var visibility = primerynav.getAttribute("data-visible");
+  		if ( visibility === "false"){
+    		primerynav.setAttribute("data-visible",true);
+    		document.querySelector(".nav").style.transform="translateX(0%)";
+  		}
+  		if ( visibility === "true"){
+    		primerynav.setAttribute("data-visible",false);
+    		document.querySelector(".nav").style.transform="translateX(100%)";
+  		}
+     	console.log(visibility);
+		console.log("clicked");
+	});
+
+</script>
+
+</body>
+</html>

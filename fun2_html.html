@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+		<title>capstone</title>
+  <link rel="icon" type="image/jpg" href="https://images.unsplash.com/photo-1645680827507-9f392edae51c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+		<meta charset="UTF-8">
+	  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<!-- <link rel="stylesheet" type="text/css" href="threepage.css"> -->
+		<link rel="stylesheet" type="text/css" href="threepage.css">
+
+</head>
+<body>
+
+	<header>
+		<div class="container">
+
+		  <h1 class="logo">Fun<span>Css</span></h1>
+
+		  <div  class="mobile-nav" aria-controls= "ul-nav" aria-expanded = "false"><i class="fa  fa-align-justify  fa-2x"></i></div>
+		  
+		  <nav class="nav">
+		      <ul id="ul-nav" data-visible = "false">
+		        <li><a href="index.html">Home</a></li> 
+		        <li><a href="fun_css.html">Fun Css</a></li>
+		        <!-- <li><a href=""><i class="fa fa-info site-nav--icon"></i>About</a></li> -->
+		      </ul> 
+		  </nav>
+		</div>
+
+	</header>
+
+
+	<section class="section">
+
+		<ul >
+				<li onclick="return show('Page1','Page2');">html</li>
+			    <li onclick="return show('Page2','Page1');">css</li>
+			</ul>
+		<div class="d1">
+
+		  	<div id="Page1">
+		    	<div class="html">
+
+<pre>
+		
+
+	  &lt;body&gt;	
+
+	   &lt;div class="sl"&gt;
+    	     &lt;div class="happy"&gt;&lt;/div&gt;
+  	   &lt;/div&gt;
+
+           &lt;div class="sl"&gt;
+             &lt;div class="meh"&gt;&lt;/div&gt;
+           &lt;/div&gt;
+
+           &lt;div class="sl"&gt;
+             &lt;div class="what">&lt;/div&gt;
+           &lt;/div&gt;
+
+	  &lt;/body&gt;
+</pre>
+				</div>
+		  	</div>
+		    
+		  	<div id="Page2" style="display:none">
+		    	<div class="css">
+<pre>
+
+	
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:4px;
+  min-height:100vh;
+  overflow:hidden;
+  background-color:#001725; 
+}
+.sl{
+  position:relative;
+  width:200px;
+  height:200px;
+  
+}
+div{
+  
+}
+.sl .happy,.what,.meh{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#333333;
+  border-radius:50%;
+/*   cursor:pointer; */
+  transition:0.5s;
+}
+.happy::before,.what::before,.meh::before {
+  content: '';
+  position:absolute;
+  top:70px;
+  left:55px;
+  width:25px;
+  height:25px;
+  opacity:0.5;
+  background:#111111;
+  border-radius:50%;
+  box-shadow: 65px 0 0 #111111;
+  transition:0.5s;
+}
+.sl .happy::after,.what::after,.meh::after  {
+  content: '';
+  position:absolute;
+  top:70%;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:45px;
+  bottom:45px;
+  width:55px;
+  height:8px;
+  opacity:0.8;
+  border-radius:8%;
+  background:#111111;
+  transition:0.5s;
+}
+
+.sl:hover .happy::after{
+  width:50px;
+  height:20px;
+  border-radius:0;
+  border-bottom-left-radius:25px;
+  border-bottom-right-radius:25px;
+  transform:translateX(-50%) translateY(10%);
+}
+.sl:hover .what::after{
+  width:50px;
+  height:20px;
+  border-radius:0;
+  border-top-left-radius:20px;
+  border-top-right-radius:20px;
+  transform:translateX(-50%) translateY(-10%);
+}
+
+.sl:hover .meh::after{
+
+  transform:translateX(-50%) translateY(70%);
+}
+.sl:hover .meh::before{
+    width:30px;
+    height:30px;
+    border-radius:15%;
+}
+.sl:hover .happy{
+    background:#39FF14;
+    filter:drop-shadow(0 0 50px #39FF14);
+}
+.sl:hover .meh{
+    background:#1589FF;
+    filter:drop-shadow(0 0 10px #1589FF);
+}
+.sl:hover .what{
+    background:#fffffc;
+    filter:drop-shadow(0 0 30px #fffffc);
+}	
+		    		
+				</pre>
+		    	</div>
+		  	</div>
+
+	  	</div>
+
+	</section>
+
+
+
+
+	<footer>
+  		<p>&copy; 2021 copy right by <span style="color: #fc42da">alia</span></p>
+	</footer>
+	<script>
+	  var primerynav = document.querySelector("#ul-nav");
+	  var mobilenav = document.querySelector(".mobile-nav");
+	  mobilenav.addEventListener("click", () => {
+	      var visibility = primerynav.getAttribute("data-visible");
+	      if ( visibility === "false"){
+	        primerynav.setAttribute("data-visible",true);
+	        document.querySelector(".nav").style.transform="translateX(0%)";
+	      }
+	      if ( visibility === "true"){
+	        primerynav.setAttribute("data-visible",false);
+	        document.querySelector(".nav").style.transform="translateX(100%)";
+	      }
+	      console.log(visibility);
+	    console.log("clicked");
+	  });
+
+
+
+	  function show(shown, hidden) {
+	  document.getElementById(shown).style.display='block';
+	  document.getElementById(hidden).style.display='none';
+	  return false;
+}
+	</script>
+</body>
+</html>

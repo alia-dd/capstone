@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+		<title>capstone</title>
+  <link rel="icon" type="image/jpg" href="https://images.unsplash.com/photo-1645680827507-9f392edae51c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+		<meta charset="UTF-8">
+	  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<!-- <link rel="stylesheet" type="text/css" href="threepage.css"> -->
+		<link rel="stylesheet" type="text/css" href="threepage.css">
+
+</head>
+<body>
+
+	<header>
+		<div class="container">
+
+		  <h1 class="logo">Fun<span>Css</span></h1>
+
+		  <div  class="mobile-nav" aria-controls= "ul-nav" aria-expanded = "false"><i class="fa  fa-align-justify  fa-2x"></i></div>
+		  
+		  <nav class="nav">
+		      <ul id="ul-nav" data-visible = "false">
+		        <li><a href="index.html">Home</a></li> 
+		        <li><a href="fun_css.html">Fun Css</a></li>
+		        <!-- <li><a href=""><i class="fa fa-info site-nav--icon"></i>About</a></li> -->
+		      </ul> 
+		  </nav>
+		</div>
+
+	</header>
+
+
+	<section class="section">
+
+		<ul >
+				<li onclick="return show('Page1','Page2');">html</li>
+			    <li onclick="return show('Page2','Page1');">css</li>
+			</ul>
+		<div class="d1">
+
+		  	<div id="Page1">
+		    	<div class="html">
+<pre>
+
+		
+	  &lt;body&gt;	
+
+	   &lt;div class="container"&gt;
+	    &lt;div class="con"&gt;
+
+	     &lt;div class="border"&gt;
+	     &lt;/div&gt;
+	     &lt;div class="border2"&gt;
+	     &lt;/div&gt;
+	     &lt;div class="border3"&gt;
+	     &lt;/div&gt;
+
+	    &lt;/div&gt;
+      	   &lt;/div&gt;
+
+	  &lt;/body&gt;
+</pre>
+				</div>
+		  	</div>
+		    
+		  	<div id="Page2" style="display:none">
+		    	<div class="css">
+<pre>
+
+	
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  min-height:100vh;
+  overflow:hidden;
+  background-color:#001f25; 
+}
+.container{
+  position:relative;
+  /*z-index:-1;*/
+  width:450px;
+  height:450px;
+  overflow:hidden;
+/*   background:red; */
+  background:rgba(255,255,255,0.2);
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  border-bottom-left-radius:30%;
+  border-bottom-right-radius:30%;
+}
+.con{
+	position:relative;
+  width:400px;
+  height:400px;
+  overflow:hidden;
+  background:rgba(1,1,1,0.2);
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  border-bottom-left-radius:30%;
+  border-bottom-right-radius:30%;
+  
+}
+.border, .border2, .border3{
+  position:absolute;
+  top:100px;
+  width:350px;
+  height:350px;
+  background:#000000;
+     border-radius: 
+  52% 48% 53% 47% / 60% 69% 31% 30% ;
+  animation-delay:5s ;
+		transition-duration: .8s;
+  
+}
+.border3{
+/*   border-top:6px solid #3a3b3c; */
+}
+.con:hover .border{
+  animation:animate 12s linear infinite;
+}
+.con:hover .border2{
+  animation:animate 12s linear infinite;
+}
+.con:hover .border3{
+  animation:animate 12s linear infinite;
+}
+
+ .border2{
+  transform:rotate(78deg);
+}
+.border3{
+  transform:rotate(45deg);
+} 
+ @keyframes animate{
+  0%{
+    
+   border-radius:
+  52% 48% 53% 47% / 60% 69% 31% 30%;
+
+    filter:hue-rotate(0deg);
+  } 
+    5%{
+    border-radius:
+  52% 48% 53% 47% / 60% 69% 31% 30%;   
+    filter:hue-rotate(0deg);
+  }
+  10%{
+    border-radius:
+  65% 35% 53% 47% / 60% 69% 31% 30%;   
+    filter:hue-rotate(0deg);
+  }
+  15%{
+    border-radius:
+  44% 46% 53% 47% / 60% 69% 31% 30% ;   
+    filter:hue-rotate(0deg);
+  }
+  20%{
+    border-radius:
+  64% 76% 64% 36% / 52% 65% 25% 48% ;   
+    filter:hue-rotate(0deg);
+  }
+  25%{
+    border-radius:
+  61% 39% 68% 32% / 38% 65% 35% 62% ;   
+    filter:hue-rotate(0deg);
+  }
+  30%{
+    border-radius:
+  40% 30% 74% 26% / 23% 66% 34% 47%  ;   
+    filter:hue-rotate(0deg);
+  }
+  35%{
+    border-radius:
+  50% 50% 64% 26% / 23% 66% 34% 67%  ;   
+    filter:hue-rotate(0deg);
+  }
+  40%{
+    border-radius:
+    53% 50% 62% 38% / 23% 62% 58% 67%  ;   
+    filter:hue-rotate(0deg);
+  }
+  45%{
+    border-radius:
+  63% 27% 67% 63% / 18% 62% 18% 62%   ;   
+    filter:hue-rotate(0deg);
+  }
+  50%{
+    border-radius:
+  73% 17% 62% 38% / 23% 62% 18% 77%   ;   
+    filter:hue-rotate(0deg);
+  }
+  55%{
+    border-radius:
+  61% 39% 49% 51% / 23% 54% 46% 77%   ;   
+    filter:hue-rotate(0deg);
+  }
+  60%{
+    border-radius:
+  65% 15% 49% 51% / 23% 37% 63% 77%   ;   
+    filter:hue-rotate(0deg);
+  }
+  65%{
+    border-radius:
+  34% 66% 24% 76% / 23% 28% 72% 77%   ;   
+    filter:hue-rotate(0deg);
+  }
+  70%{
+    border-radius:
+  34% 66% 24% 76% / 23% 6% 64% 77%   ;   
+    filter:hue-rotate(0deg);
+  }
+  75%{
+    border-radius:
+  34% 66% 68% 32% / 23% 26% 74% 77%   ;   
+    filter:hue-rotate(0deg);
+  }
+  80%{
+    border-radius:
+  34% 66% 68% 32% / 50% 26% 74% 50%   ;   
+    filter:hue-rotate(0deg);
+  }
+  85%{
+    border-radius:
+  74% 26% 64% 36% / 52% 75% 25% 48% ;   
+    filter:hue-rotate(0deg);
+  }
+  90%{
+    border-radius:
+  74% 26% 53% 47% / 70% 69% 31% 30%   ;   
+    filter:hue-rotate(0deg);
+  }
+  95%{
+    border-radius:
+  65% 35% 53% 47% / 70% 69% 31% 30%    ;   
+    filter:hue-rotate(0deg);
+  }
+  100%{
+
+    border-radius:
+  52% 48% 53% 47% / 70% 69% 31% 30%    ;
+
+  }
+} 
+
+	
+		    		
+				</pre>
+		    	</div>
+		  	</div>
+
+	  	</div>
+
+	</section>
+
+
+
+
+	<footer>
+  		<p>&copy; 2021 copy right by <span style="color: #fc42da">alia</span></p>
+	</footer>
+	<script>
+	  var primerynav = document.querySelector("#ul-nav");
+	  var mobilenav = document.querySelector(".mobile-nav");
+	  mobilenav.addEventListener("click", () => {
+	      var visibility = primerynav.getAttribute("data-visible");
+	      if ( visibility === "false"){
+	        primerynav.setAttribute("data-visible",true);
+	        document.querySelector(".nav").style.transform="translateX(0%)";
+	      }
+	      if ( visibility === "true"){
+	        primerynav.setAttribute("data-visible",false);
+	        document.querySelector(".nav").style.transform="translateX(100%)";
+	      }
+	      console.log(visibility);
+	    console.log("clicked");
+	  });
+
+
+
+	  function show(shown, hidden) {
+	  document.getElementById(shown).style.display='block';
+	  document.getElementById(hidden).style.display='none';
+	  return false;
+}
+	</script>
+</body>
+</html>
